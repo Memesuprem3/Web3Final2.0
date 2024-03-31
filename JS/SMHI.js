@@ -35,11 +35,12 @@ function displayWeatherData(data) {
         const temperature = forecast.parameters.find(p => p.name === 't').values[0];
         const roundedTemperature = Math.round(temperature); // Avrunda temperaturen till närmaste heltal
         const weatherSymbol = forecast.parameters.find(p => p.name === 'Wsymb2').values[0];
+        const weatherDescription = weatherSymbolDescriptions[weatherSymbol] || 'Molnigt';
 
         const weatherDayDiv = document.createElement('div');
         weatherDayDiv.classList.add('weather-info');
         weatherDayDiv.innerHTML = `<div class="weather-day">${weekday}</div>
-                                   <div class="weather-details">${getWeatherIcon(weatherSymbol)} ${roundedTemperature} °C</div>`;
+                                   <div class="weather-details">${getWeatherIcon(weatherSymbol)} ${roundedTemperature} °C, ${weatherDescription}</div>`;
         
         weatherInfoDiv.appendChild(weatherDayDiv);
     });
@@ -66,3 +67,13 @@ function getWeatherIcon(wSymbol) {
             return '<i class="wi wi-cloud"></i>';
     }
 }
+
+const weatherSymbolDescriptions = {
+    1: 'Klart och soligt',
+    2: 'Lätt molnighet',
+    3: 'Halvklart',
+    4: 'Molnigt',
+    5: 'Regnskurar',
+    6: 'Regn',
+    7: 'snöfall',
+};
