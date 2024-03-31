@@ -1,0 +1,289 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f7;
+    background-image: url('/bilder/1.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+.date-time-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 5px; 
+}
+
+.date-time {
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0; 
+    border-radius: 15px;
+    min-width: 200px;
+    color: #333;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Stilar för tid och datum */
+.date-time .time, .date-time .date {
+    display: inline-block; 
+
+}
+/* Justera detta värde för att öka eller minska mellanrummet */
+.date-time .margin {
+    display: inline-block;
+    min-width: 100px; 
+}
+.editable-container{
+    text-align: center;
+}
+.editable {
+    display: inline-block; 
+    border-radius: 1px;
+    padding: 5px; 
+    margin-top: 20px; 
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer; 
+}
+
+.editable:hover {
+    background-color: #f0f0f0; 
+    border-radius: 15px;
+}
+
+
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.8);
+    gap: 20px; 
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto; 
+    max-width: 1200px; 
+}
+
+.widget {
+    background-color: #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(25% - 20px); 
+    box-sizing: border-box;
+    min-width: 250px; 
+    min-height: 440px;
+    max-height: 440px;
+    overflow-y: auto;
+    flex: 1 1 calc(25% - 20px);
+}
+
+/* Widget-titlar */
+.widget h2 {
+    color: #333;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+/* Anpassningar för snabblänkar */
+.quick-links a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 10px; 
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+.quick-links a:hover {
+    background-color: #f0f0f0; 
+}
+
+/* Stil för "Lägg till länk"-formulärets input och knapp */
+.add-link-form input[type="text"] {
+    padding: 10px;
+    margin: 5px 0; /* Ger utrymme ovan och nedan */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 22px); /* Justerar för padding och border */
+}
+
+.add-link-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; 
+    width: 92%; 
+    margin-top: 5px; 
+}
+
+.add-link-form button:hover {
+    background-color: lightblue;
+}
+
+#linksList {
+    padding-left: 0; 
+}
+
+#linksList li {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+
+#linksList li a {
+    flex-grow: 1; 
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: rgb(230, 228, 228);
+}
+
+#linksList li a:hover {
+    background-color: #f0f0f0;
+}
+
+.remove-btn {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background-color: lightgrey;
+    border: none;
+    border-radius: 50%; 
+    color: white;
+    font-size: 20px;
+    padding: 0; 
+    cursor: pointer;
+    margin-left: auto; 
+}
+
+.remove-btn:hover {
+    background-color: #cc0000;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+.note {
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-top: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ccc;
+    box-sizing: border-box; 
+    overflow-y: auto; 
+    max-height: 100px; 
+    max-width: 200px;
+    position: relative;
+}
+
+.notes .content {
+    background-color: #ccc;
+    height: 200px; 
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+    padding: 5px;
+    margin-bottom: 100px;
+    border-radius: 4px;
+}
+.note button {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: lightblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.note button:hover {
+    background-color: lightcoral;
+}
+
+.weather-info {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+}
+
+.weather-day {
+    margin-bottom: 5px;
+}
+
+.temperature {
+    font-weight: bold;
+}
+
+.weather-icon img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+#changeBackgroundBtn {
+    position: fixed; 
+    left: 50%; 
+    bottom: 20px; 
+    transform: translateX(-50%); 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+#changeBackgroundBtn:hover {
+    background-color: #0056b3; 
+}
+/* enkel responsive */
+@media (max-width: 768px) {
+    .widget {
+        
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .widget {
+        
+        flex: 1 1 100%;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/weather-icons.css">
+    <link rel="stylesheet" href="css/weather-icons-wind.css">
+    
+</head>
+<body>
+    <div class="date-time-container">
+        <div id="dateTimeDisplay" class="date-time"></div>
+    </div>
+    <div class="editable-container">
+        <h1 id="editableHeading" class="editable"><span class="editable-text">Klicka här för att ändra rubriken</span></h1>
+    </div>
+  
+    <div class="dashboard">
+        <div class ="widget quick-links">
+            <h2>Snabblänkar</h2>
+            <ul id="linksList">
+            <!-- Länkar läggs till här dynamiskt -->
+            </ul>
+            <div class="add-link-form">
+            <input type="text" id="linkTitle" placeholder="Länkrubrik">
+            <input type="text" id="linkUrl" placeholder="Länk-URL">
+            <button id="addLinkBtn">Lägg till länk</button>
+            </div>
+        </div>
+
+        <div class="widget weather">
+            <h2>Väder</h2>
+            <div id="weatherInfo"></div>
+            <div id="weatherIcon"></div>
+        </div>
+
+        <div class="widget stocks">
+            <h2>stocks</h2>
+            
+        </div>
+
+        <div class="widget notes">
+            <h2>Anteckningar</h2>
+            <div class="content"></div> <!-- Anteckningar visas här -->
+            <input type="text" id="noteInput">
+            
+        </div>
+       
+    </div>
+    <button id="changeBackgroundBtn">Ändra bakgrund</button>
+    <script src="JS/main.js"></script>
+    <script src="JS/SMHI.js"></script>
+    <script src="js/Time.js"></script>
+    <script src="JS/Links.js"></script>
+    <script src="JS/unsplash.js"></script>
+</body>
+</html>
